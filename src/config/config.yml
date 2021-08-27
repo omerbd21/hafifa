@@ -1,0 +1,13 @@
+stages:
+  it:
+    fields: ["network",  "storage", "baremetal"]
+  os: 
+    fields: ["windows",  "linux", "scripting"]
+  development:
+    fields: ["python"]
+  data:
+    fields: ["elastic", "sql", "mongo", "rac", "hadoop"]
+  devops:
+    fields: ["ansible", "puppet", "jenkins", "terraform"]
+  nicetomeet:
+    fields: ["next"]
