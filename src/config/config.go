@@ -52,3 +52,29 @@ func IsFieldInStage(stage string, field string) bool {
 	}
 	return false
 }
+func HandleConfig(params ...string) {
+	switch len(params) {
+	case 0:
+		fmt.Println(`hafifa config is used to handle your credentials.
+		Usage:
+			hafifa config show
+			hafifa config set [field]`)
+	case 1:
+		if params[0] == "show" {
+			// Implement showing the .env file here
+		} else if params[0] == "set" {
+			fmt.Println(`Please specify a value you want to set.
+			The possible values are:
+			username`)
+		} else {
+			fmt.Println("This is not a correct usage of hafifa config.")
+		}
+	case 2:
+		if params[0] == "set" && params[1] == "username" {
+			// Implement here setting a username in env file
+		} else {
+			fmt.Println("This is not a correct usage of hafifa config.")
+		}
+	}
+
+}

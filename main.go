@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	ansible "hafifa/src/ansible"
 	config "hafifa/src/config"
 	"os"
 )
@@ -28,10 +29,13 @@ func main() {
 	field := os.Args[2]
 	if config.IsStage(stage) {
 		if config.IsFieldInStage(stage, field) {
-			fmt.Println(stage, field)
+			//fmt.Println(stage, field)
+			ansible.RunPlaybook()
 		} else {
 			invalidParameters()
 		}
+	} else if stage == "config" {
+		config.HandleConfig()
 	} else {
 		invalidParameters()
 	}
