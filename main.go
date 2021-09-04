@@ -30,7 +30,7 @@ func main() {
 	if config.IsStage(stage) {
 		if config.IsFieldInStage(stage, field) {
 			//fmt.Println(stage, field)
-			ansible.RunPlaybook()
+			ansible.RunPlaybook(stage, field)
 		} else {
 			invalidParameters()
 		}

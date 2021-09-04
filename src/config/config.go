@@ -65,16 +65,22 @@ func HandleConfig(params ...string) {
 		} else if params[0] == "set" {
 			fmt.Println(`Please specify a value you want to set.
 			The possible values are:
-			username`)
+			username
+			folder`)
 		} else {
 			fmt.Println("This is not a correct usage of hafifa config.")
 		}
 	case 2:
 		if params[0] == "set" && params[1] == "username" {
 			// Implement here setting a username in env file
+		} else if params[0] == "set" && params[1] == "folder" {
+			//Implement here setting a local folder in env file
 		} else {
 			fmt.Println("This is not a correct usage of hafifa config.")
 		}
 	}
-
+}
+func ReadEnv() map[string]string {
+	return nil
+	// Implement here reading from .env and returning a map
 }

@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+
+  tasks:
+    - name: storage
+      file:
+        path: storage
+        state: touch
